@@ -7,31 +7,28 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <h1>Recommended Books</h1>
+
   <?php 
-    $name = "Neuromancer";
-    $read = true; 
-    $number = false;
-
-    if($read) {
-      $message = "You have read $name";
-    } else {
-      $message = "You have NOT read $name";
-    }
-
-    if($number) {
-      $lucky = "You are the first number";
-    } else {
-      $lucky = "You are NOT the first number";
-    }
+    $books = [
+      "Do Androids Dream of Electric Sheep",
+      "The Langoliers",
+      "Hail Mary"
+    ];
   ?>
 
-  <h1>
-    <?= $message ?>
-  </h1>
+  <ul>
+    <?php foreach ($books as $book) {
+      echo "<li>$book</li>";
+    };
+    ?>
+  </ul>
 
-  <h2>
-    <?= $lucky ?>
-  </h2>
-  
+  <ul>
+    <?php foreach ($books as $book) : ?>
+      <li><?= $book; ?></li>
+    <?php endforeach; ?>
+  </ul>
+
 </body>
 </html>
