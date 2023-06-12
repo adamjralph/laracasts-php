@@ -7,10 +7,31 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <?php 
+    $name = "Neuromancer";
+    $read = true; 
+    $number = false;
+
+    if($read) {
+      $message = "You have read $name";
+    } else {
+      $message = "You have NOT read $name";
+    }
+
+    if($number) {
+      $lucky = "You are the first number";
+    } else {
+      $lucky = "You are NOT the first number";
+    }
+  ?>
 
   <h1>
-    You have read "Neuromancer"
+    <?= $message ?>
   </h1>
+
+  <h2>
+    <?= $lucky ?>
+  </h2>
   
 </body>
 </html>
