@@ -30,5 +30,9 @@
     <?php endforeach; ?>
   </ul>
 
+  <p>
+    <?php echo $books[2]; ?>
+  </p>
+
 </body>
 </html>
